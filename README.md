@@ -8,8 +8,8 @@ Programs are organized by folder named by fields.
 
 ### Maths
 NORMVEC computes the norm of a vector:
-- After launching the program, the execution halts iin order to get the input.
-- Type the value for X component in X register and then select 'X' component in the variable menu.
+- After launching the program, the execution halts in order to get the input.
+- Type the value for X component in X register and then select `X` component in the variable menu.
 - Repeat previous step for Y and Z components.
 - Type `R/S` to complete the course of the program 
 - The norm is computed in the X register so you may use it for additional calculations.
