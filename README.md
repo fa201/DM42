@@ -32,6 +32,7 @@ Some parameters are hard coded for Robin DR-300 and DR-400 in order to have less
 - arm for luggages: 1.9 units
 - arm for fuel tank 1: 1.12 units
 - take-off arm as a percentage of allowed arm stroke (0.359 units), meaning from front limit (0.205 units) to aft limit (0.205 + 0.359 units).
+  
 How to use the program:
 - After launching the program, the execution halts in order to get the input.
 - Type the value for empty mass in X register and then select `MV` in the variable menu. Same for empty mass arm `XV`.
