@@ -4,7 +4,7 @@ Programs for calculators: HP-42s, DM42 or Free42
 This repository contains some programs I made in various fields: maths, aviation, etc.
 
 ## Programs
-Programs are organized by folder named by fields. For each program, there is a folder which contains a binary raw file and a text file showing the instructions of the program. The fext file is decoded with the help of ![Swiwwmicros decoder for DM42](https://technical.swissmicros.com/decoders/dm42/index.php).
+Programs are organized by folder named by fields. For each program, there is a folder which contains a binary raw file and a text file showing the instructions of the program. The text file is decoded with the help of ![Swisswwmicros decoder for DM42](https://technical.swissmicros.com/decoders/dm42/index.php).
 
 ### Maths
 `norm_vector/NORMVEC` computes the norm of a vector:
@@ -38,7 +38,14 @@ How to use the program:
 - Type the value for empty mass in X register and then select `MV` in the variable menu. Same for empty mass arm `XV`.
 - Type the value for the mass on seat row 1 in X register and then select `MR1`. Same for the mass on row 2 `MR2` if applicable.
 - Type the value for the mass of luggages in X register and then select `MBAG` if applicable. Same for the mass of fuel tank 1 `MC1`.
-- Type the value for mass of fuel tank 2 in X register and then select `MC2` in the variable menu, if appliicable. Same for its mass arm `XC2`.
+- Type the value for mass of fuel tank 2 in X register and then select `MC2` in the variable menu, if applicable. Same for its mass arm `XC2`.
 - Type `R/S` to complete the course of the program 
 - The total mass is stored in Y register and in `MD` and the take-off arm as a percentage of arm stroke is stored in X register and `XD`. So `XD` should be between 0 and 100% to be compliant. Note that only the integer part is kept for `XD`. 
+
+`aviation/ESPY` computes the height of cumulus base based on temperature and dew point. This is an approximation based on Espy formula.
+Units: temperatures in Celsius degrees and height in feet.
+- After launching the program, the execution halts in order to get the input.
+- Temperature is asked. After input press `R/S` to continue.
+- Dew point is asked. After input press `R/S` to continue.
+- The height of cumulus base is in X register.
 
