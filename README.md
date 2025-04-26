@@ -49,3 +49,23 @@ Units: temperatures in Celsius degrees and height in feet.
 - Dew point is asked. After input press `R/S` to continue.
 - The height of cumulus base is in X register.
 
+### Impact
+These programs helps to compute impactor displacement or efficiency in the event of an impact driven by mass and initial velocity. The relationship is: energy = efficiency * load * displacement. Load can be replaced by acceleration * mass * g. Units are: J for energy, kN for load, mm for displacement and g for acceleration. Efficiency is between 0 and 1.
+
+`impact/HI1` computes the necessary displacement of the head for a head impact, as per ECE-R21 or FMVSS201, based on energy to be absorbed with the maximum acceleration and a given efficiency. The mass of head is 6.8 kg.
+How to use the program:
+- After launching the program, the execution halts in order to get the input.
+- Type the value for energy in X register and then select `ENER` in the variable menu. Same for efficiency `EFFY` and acceleration `ACCL`.
+- Type `R/S` to complete the course of the program 
+- The displacement is stored in X register and in `DISP`.
+
+`impact/HI2` computes the efficiency under the same relationship as HI1 and the program works in the same way.
+
+`impact/KNE1` computes the necessary displacement of the knee impact considering a single leg thrown with initial velocity onto a part.
+How to use the program:
+- After launching the program, the execution halts in order to get the input.
+- Type the value for energy in X register and then select `ENER` in the variable menu. Same for efficiency `EFFY` and load `LOAD`.
+- Type `R/S` to complete the course of the program 
+- The displacement is stored in X register and in `DISP`.
+
+`impact/KNE2` computes the efficiency under the same relationship as KNE1 and the program works in the same way.
